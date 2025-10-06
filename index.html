@@ -1,77 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Donal Siby | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Donal Siby — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="description" content="Donal Siby — Software Developer & AI/ML Engineer | Portfolio" />
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Donal Siby</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Donal Siby</h1>
+        <p class="sub">Software Developer · Data Science, AI / ML Enthusiast</p>
+      </div>
+
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
   </header>
 
-  <section id="hero">
-    <div class="intro">
-      <h2>Hi, I'm <span>Donal Siby</span></h2>
-      <p>Software Developer | Data Science & AI Enthusiast</p>
-      <a href="#projects" class="btn">View My Work</a>
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="intro">
+          <h2 class="typewriter">Hi, I'm <span class="accent">Donal Siby</span></h2>
+          <p class="lead">
+            Computer Science graduate (B.Tech) • Software Developer • Data Science, AI & Machine Learning practitioner.
+            Based in Bangalore (BTM Layout). I build backend & frontend features, ML models and polished web apps.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="https://github.com/donallsiby" target="_blank" rel="noopener">My GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-meta">
+          <ul class="meta-list">
+            <li><strong>Location:</strong> Bangalore, BTM Layout</li>
+            <li><strong>Education:</strong> B.Tech — CSE (Completed 2025)</li>
+            <li><strong>Training:</strong> Data Science & AI course (ongoing)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-dark">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am a self-motivated developer with a passion for building software and intelligent systems.
+          My background is in computer science, and I have hands-on experience implementing algorithms,
+          building full-stack applications, and training ML models. I enjoy writing clean, efficient code,
+          improving performance, and learning the latest AI tools and techniques.
+        </p>
+        <p>
+          Strengths: Problem solving, data structures & algorithms, OOP, API development, collaborative development with Git, and bringing ML into production.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Languages</h3>
+            <p>Python · Java (OOP) · C++ · HTML · CSS · JavaScript</p>
+          </div>
+          <div class="skill-card">
+            <h3>AI / ML</h3>
+            <p>Machine Learning · Deep Learning · scikit-learn · TensorFlow · PyTorch · Transformers · Prompt engineering</p>
+          </div>
+          <div class="skill-card">
+            <h3>Databases & Backend</h3>
+            <p>SQL · MySQL · Oracle · Django · Flask</p>
+          </div>
+          <div class="skill-card">
+            <h3>Tools & Practices</h3>
+            <p>GitHub · Power BI · Adobe Photoshop · Figma · Canva · Data Visualization · Data Preprocessing · Team Leadership · Problem-Solving · Agile Collaboration</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:1.25rem">Skills learned from projects</h3>
+        <ul class="learned-list">
+          <li>Transformer architectures & generative models (AudioGen/GANSynth)</li>
+          <li>End-to-end backend design with authentication, role-based access & SQL</li>
+          <li>Model evaluation, feature engineering, and hyperparameter tuning</li>
+          <li>Responsive frontend, deploy to GitHub Pages, and version control</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section-dark">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+          <article class="project">
+            <h3>AI Voice Creation by Prompt</h3>
+            <p class="muted">Generative AI · Python · Transformers · AudioGen · GANSynth</p>
+            <p>
+              Built a web application using AudioGen and GANSynth to generate realistic audio from text prompts. Integrated transformer models to create diverse soundscapes with an intuitive UI.
+            </p>
+            <p><strong>Skills learned:</strong> transformer pipelines, prompt engineering, model integration, API endpoints, Streamlit/Flask demo.</p>
+            <p><a class="proj-link" href="https://github.com/donallsiby/prompttoaudio" target="_blank" rel="noopener">View on GitHub</a></p>
+          </article>
+
+          <article class="project">
+            <h3>College Voting System</h3>
+            <p class="muted">Full-stack Web · PHP · MySQL · Authentication</p>
+            <p>
+              Developed a secure PHP-based election platform supporting voter registration, real-time voting, and result updates. Improved election transparency and accessibility for 200+ students.
+            </p>
+            <p><strong>Skills learned:</strong> relational database design, SQL queries & optimization, backend security, sessions & authentication.</p>
+          </article>
+
+          <article class="project">
+            <h3>Machine Learning Coursework Collection</h3>
+            <p class="muted">scikit-learn · Data Preprocessing · Model Evaluation</p>
+            <p>
+              Implemented typical ML workflows — regression, classification, clustering — and evaluated models with cross-validation,
+              precision/recall/F1 metrics. Visualized results and optimized features via PCA and feature selection.
+            </p>
+            <p><strong>Skills learned:</strong> preprocessing, CV, hyperparameter tuning, visualization with Matplotlib/Seaborn.</p>
+          </article>
+
+          <article class="project">
+            <h3>Portfolio Website</h3>
+            <p class="muted">HTML · CSS · JavaScript · GitHub Pages</p>
+            <p>
+              This personal site: responsive layout, smooth navigation, and project showcase. Deployed on GitHub Pages for easy sharing.
+            </p>
+            <p><strong>Skills learned:</strong> responsive design, accessibility basics, deployment, SEO meta tags.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience & Involvement</h2>
+
+        <div class="exp-grid">
+          <div class="exp-card">
+            <h4>Freelancer – Data Science & AI</h4>
+            <p class="muted">2025 — Present</p>
+            <ul>
+              <li>Designed and deployed AI/ML solutions for client use cases, improving efficiency and decision-making.</li>
+              <li>Built predictive models and conducted statistical analysis using Python, SQL, and visualization tools.</li>
+              <li>Delivered end-to-end workflows including data collection, preprocessing, model training, and deployment.</li>
+            </ul>
+          </div>
+
+          <div class="exp-card">
+            <h4>Technician & Designer – Global Events</h4>
+            <p class="muted">2022 — Present</p>
+            <ul>
+              <li>Created branding materials and digital assets for large-scale events, ensuring high visual impact.</li>
+            </ul>
+          </div>
+
+          <div class="exp-card">
+            <h4>Chairperson – IEEE SB CEP</h4>
+            <p class="muted">2024 — 2025</p>
+            <ul>
+              <li>Increased membership engagement by 30% through strategic event planning and outreach.</li>
+              <li>Coordinated technical workshops and managed cross-functional teams for smooth execution.</li>
+            </ul>
+          </div>
+
+          <div class="exp-card">
+            <h4>Designer – IEEE ComSoc Kerala Chapter</h4>
+            <p class="muted">2024 — 2025</p>
+            <ul>
+              <li>Designed and delivered interactive visual content for events and promotions across the region.</li>
+              <li>Collaborated with teams to deliver high-quality graphics for 5+ regional initiatives.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top:1.25rem">Key Competencies</h3>
+        <ul class="learned-list">
+          <li>Data Analysis & Visualization</li>
+          <li>SQL Querying & Database Management</li>
+          <li>Machine Learning Model Development</li>
+          <li>Problem-Solving & Debugging</li>
+          <li>Project Leadership & Team Collaboration</li>
+          <li>Creative Design & Presentation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section-dark">
+      <div class="container">
+        <h2>Contact</h2>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ndonalsiby@gmail.com">ndonalsiby@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> Phone: +91 98952 18857</p>
+        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/donallsiby" target="_blank" rel="noopener">github.com/donallsiby</a></p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/donal-siby" target="_blank" rel="noopener">linkedin.com/in/donal-siby</a></p>
+
+        <div class="signature">
+          <p>— Donal Siby</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Donal Siby — Built with HTML, CSS & JavaScript</p>
     </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a Computer Science graduate passionate about creating software and applying 
-      AI & Machine Learning in real-world projects. I enjoy learning new technologies 
-      and building interactive web applications.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>C++ / C#</li>
-      <li>JavaScript</li>
-      <li>HTML & CSS</li>
-      <li>SQL / MySQL</li>
-      <li>Machine Learning</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>AI Voice Creation by Prompt</h3>
-      <p>Built an AI-powered app using AudioGen and GANSynth to generate realistic sounds from text prompts.</p>
-      <a href="https://github.com/donallsiby/prompttoaudio" target="_blank">View Project</a>
-    </div>
-
-    <div class="project-card">
-      <h3>College Voting System</h3>
-      <p>Developed a secure PHP + MySQL-based web application for online college elections.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ndonalsiby@gmail.com">ndonalsiby@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/donallsiby" target="_blank">github.com/donallsiby</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/donal-siby" target="_blank">linkedin.com/in/donal-siby</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Donal Siby | Built with ❤️ using HTML, CSS, and JavaScript</p>
   </footer>
 
   <script src="script.js"></script>
