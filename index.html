@@ -4,16 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Donal Siby — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <meta name="description" content="Donal Siby —  Data Science & AI | Software Developer & AI/ML Engineer | Portfolio" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Donal Siby — Data Science & AI | Software Developer & AI/ML Engineer | Portfolio" />
 </head>
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <h1>Donal Siby</h1>
-        <p class="sub"> Data Scientist · AI Engineer · Machine Learning Developer · Software Developer </p>
+        <p class="sub">Data Scientist · AI Engineer · Machine Learning Developer · Software Developer</p>
       </div>
 
       <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
@@ -22,6 +33,7 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certificates</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -33,30 +45,66 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section id="hero" class="hero">
+      <!-- Ambient Glow Dots -->
+      <div class="glow-spot glow-1"></div>
+      <div class="glow-spot glow-2"></div>
+      
       <div class="container hero-inner">
         <div class="intro">
-          <h2 class="typewriter">Hi, I'm <span class="accent">Donal Siby</span></h2>
+          <h2>Hi, I'm <span class="accent">Donal Siby</span></h2>
+          <h3 class="hero-subtitle">Specializing in <span class="typed-text"></span><span class="typed-cursor">|</span></h3>
           <p class="lead">
-  Computer Science graduate (B.Tech) specializing in Artificial Intelligence,
-  Machine Learning, and Data Science. Based in Bangalore (BTM Layout), I develop
-  intelligent software solutions, predictive machine learning systems, and
-  data-driven applications that solve real-world business problems. My expertise
-  spans AI engineering, analytics, full-stack development, and deploying
-  production-ready machine learning solutions.
-</p>
+            Computer Science graduate (B.Tech) specializing in Artificial Intelligence,
+            Machine Learning, and Data Science. Based in Bangalore, I develop
+            intelligent software solutions, predictive machine learning models, and
+            data-driven applications that solve real-world business problems. My expertise
+            spans AI engineering, analytics, full-stack development, and deploying
+            production-ready machine learning solutions.
+          </p>
+          
+          <div class="hero-meta-inline">
+            <div class="meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Bangalore, India</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>B.Tech CSE (2025)</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-brain"></i>
+              <span>Data Science &amp; AI</span>
+            </div>
+          </div>
+          
           <div class="cta-row">
-            <a class="btn" href="#projects">View Projects</a>
-            <a class="btn ghost" href="https://github.com/donallsiby" target="_blank" rel="noopener">My GitHub</a>
+            <a class="btn" href="#projects">View Projects <i class="fas fa-arrow-right"></i></a>
+            <a class="btn ghost" href="https://github.com/donallsiby" target="_blank" rel="noopener"><i class="fab fa-github"></i> My GitHub</a>
           </div>
         </div>
 
-        <div class="hero-meta">
-          <ul class="meta-list">
-            <li><strong>Location:</strong> Bangalore, BTM Layout</li>
-            <li><strong>Education:</strong> B.Tech — CSE (Completed 2025)</li>
-            <li><strong>Training:</strong> Data Science & AI course (ongoing)</li>
-          </ul>
+        <div class="hero-avatar-container">
+          <div class="hero-avatar-card" id="avatar-card">
+            <div class="avatar-glow"></div>
+            <div class="avatar-img-container">
+              <img src="profile.jpg" alt="Donal Siby" class="avatar-img">
+            </div>
+            <!-- Floating Skill Badges -->
+            <div class="floating-badge badge-1">
+              <i class="fab fa-python"></i> Python
+            </div>
+            <div class="floating-badge badge-2">
+              <i class="fas fa-database"></i> SQL
+            </div>
+            <div class="floating-badge badge-3">
+              <i class="fas fa-brain"></i> ML / AI
+            </div>
+            <div class="floating-badge badge-4">
+              <i class="fas fa-chart-line"></i> Power BI
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -91,12 +139,13 @@
 
           <div class="skill-card">
             <h3>Data Science & AI</h3>
-<p>
-Machine Learning · Classification · Regression ·
-Feature Engineering · Data Preprocessing ·
-Model Evaluation · EDA · Generative AI ·
-Prompt Engineering · Model Deployment
-</p>
+            <p>
+              Machine Learning · Classification · Regression ·
+              Feature Engineering · Data Preprocessing ·
+              Model Evaluation · EDA · Generative AI ·
+              Prompt Engineering · Model Deployment
+            </p>
+          </div>
 
           <div class="skill-card">
             <h3>Databases</h3>
@@ -130,176 +179,340 @@ Prompt Engineering · Model Deployment
       </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-dark">
+      <div class="container">
+        <h2>Certifications</h2>
+        <div class="skills-grid">
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="cert-info">
+              <h3>Advanced Certification in Data Science &amp; AI</h3>
+              <p class="cert-org">Electronics &amp; ICT Academy, Indian Institute of Technology (IIT), Guwahati</p>
+              <p class="cert-desc">
+                Supported by Ministry of Electronics and Information Technology (MeitY), Govt. of India. Covered advanced statistical analysis, machine learning pipelines, deep learning models, and production AI engineering.
+              </p>
+              <span class="tech-tag" style="background: rgba(99, 102, 241, 0.08); color: var(--accent-2); border-color: rgba(99, 102, 241, 0.15);">
+                July 2025 — April 2026
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="projects" class="section-dark">
+    <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
-        <div class="project-grid">
-          <article class="project featured-project">
+        
+        <!-- Category Filter Buttons -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai-ml">AI &amp; Machine Learning</button>
+          <button class="filter-btn" data-filter="web">Web &amp; Full-Stack</button>
+          <button class="filter-btn" data-filter="analytics">Data Analytics &amp; BI</button>
+        </div>
 
-<h3>❤️ CardioMLP – Precision AI Heart Risk Diagnostics</h3>
-
-<p class="muted">
-Healthcare AI · Machine Learning · Classification · Streamlit
-</p>
-
-<p>
-Developed an AI-powered healthcare prediction platform that assesses
-cardiovascular disease risk using machine learning classification models.
-The system analyzes patient health metrics and generates real-time risk
-predictions to support early diagnosis and preventive healthcare decisions.
-</p>
-
-<p>
-Trained and evaluated multiple machine learning models including
-Logistic Regression, Decision Trees, and Random Forest classifiers.
-Implemented feature engineering, data preprocessing, and model optimization
-to improve prediction accuracy and reliability.
-</p>
-
-<p>
-<strong>Skills learned:</strong>
-Classification Modeling, Healthcare Analytics, Feature Engineering,
-Data Preprocessing, Model Evaluation, Scikit-learn, Pandas,
-NumPy, Streamlit Deployment.
-</p>
-
-<p>
-<a class="proj-link"
-href="https://github.com/donallsiby/CardioMLP---Precision-AI-Heart-Risk-Diagnostics"
-target="_blank"
-rel="noopener">
-View on GitHub
-</a>
-</p>
-
-</article>
-          <article class="project featured-project">
-            <h3>Burnout AI – Workforce Wellness</h3>
-            <p class="muted">AI System · Machine Learning · React · Python</p>
-            <p>Full-stack ML platform predicting employee burnout risk using Random Forest (Accuracy ≈ 84%). Integrated React frontend with a Python ML engine.</p>
-            <p><strong>Skills:</strong> Classification, API Integration, Model Deployment.</p>
-            <a class="proj-link" href="https://github.com/donallsiby/burnout-ai-ml-platform" target="_blank">View on GitHub</a>
+        <div class="project-grid" id="project-grid">
+          
+          <!-- InterviewIQ (FEATURED) -->
+          <article class="project featured-project" data-category="ai-ml web">
+            <h3>InterviewIQ – AI Interview Confidence Analyzer</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">React 19</span>
+              <span class="tech-tag">ASP.NET Core 9</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Librosa</span>
+              <span class="tech-tag">Scikit-Learn</span>
+              <span class="tech-tag">Redux Toolkit</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+            <p>
+              A production-grade, AI-powered interview coaching platform that evaluates candidate confidence, communication quality, emotional state, and interview readiness. It integrates browser-based response recording with live waveforms, acoustic feature engineering (pitch, jitter, syllables/sec), deep learning emotion recognition, and constructive feedback dashboards.
+            </p>
+            <p><strong>Skills learned:</strong> Real-time audio analysis, deep learning classification, full-stack API integration, containerized deployment, advanced state management.</p>
+            <a class="proj-link" href="https://github.com/donallsiby/InterviewIQ" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </article>
-          <article class="project featured-project">
+
+          <!-- HealthConnect (FEATURED) -->
+          <article class="project featured-project" data-category="web">
+            <h3>🏥 HealthConnect – Digital Healthcare Platform</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">ASP.NET Core</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">Entity Framework</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+            <p>
+              Developed a secure, enterprise-grade healthcare platform connecting patients with doctors. Implemented doctor appointment booking pipelines, real-time medical slot tracking, secure EHR (Electronic Health Records) dashboards, and user authentication.
+            </p>
+            <p><strong>Skills learned:</strong> Backend database design, secure token authentication, RESTful API design, database querying, full-stack state sync.</p>
+            <a class="proj-link" href="https://github.com/donallsiby/HealthConnect---Healthcare-Platform" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- CardioMLP (FEATURED) -->
+          <article class="project featured-project" data-category="ai-ml">
+            <h3>❤️ CardioMLP – Precision AI Heart Risk Diagnostics</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Healthcare AI</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Classification</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">NumPy</span>
+            </div>
+            <p>
+              Developed an AI-powered healthcare prediction platform that assesses cardiovascular disease risk using machine learning classification models. The system analyzes patient health metrics and generates real-time risk predictions to support early diagnosis and preventive healthcare decisions.
+            </p>
+            <p>
+              Trained and evaluated multiple machine learning models including Logistic Regression, Decision Trees, and Random Forest classifiers. Implemented feature engineering, data preprocessing, and model optimization to improve prediction accuracy and reliability.
+            </p>
+            <p><strong>Skills learned:</strong> Classification Modeling, Healthcare Analytics, Feature Engineering, Data Preprocessing, Model Evaluation, Scikit-learn, Pandas, NumPy, Streamlit Deployment.</p>
+            <a class="proj-link" href="https://github.com/donallsiby/CardioMLP---Precision-AI-Heart-Risk-Diagnostics" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Burnout AI (FEATURED) -->
+          <article class="project featured-project" data-category="ai-ml web">
+            <h3>Burnout AI – Workforce Wellness</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">AI System</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Random Forest</span>
+            </div>
+            <p>Full-stack ML platform predicting employee burnout risk using Random Forest (Accuracy ≈ 84%). Integrated React frontend with a Python ML engine.</p>
+            <p><strong>Skills learned:</strong> Classification, API Integration, Model Deployment.</p>
+            <a class="proj-link" href="https://github.com/donallsiby/burnout-ai-ml-platform" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Ames AI (FEATURED) -->
+          <article class="project featured-project" data-category="ai-ml">
             <h3>🏠 Ames AI – Elite House Price Prediction</h3>
-            <p class="muted">Machine Learning · Ridge Regression · Streamlit · Plotly · Scikit-learn</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Ridge Regression</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Plotly</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">L1 &amp; L2 Regularization</span>
+            </div>
             <p>
-              Built an enterprise-grade ML web application that predicts residential property prices 
-              using the Ames Housing dataset. Compared Linear, Polynomial, Lasso, and Ridge regression models, 
-              achieving an <strong>R² score of 0.875</strong> after hyperparameter tuning.
+              Built an enterprise-grade ML web application that predicts residential property prices using the Ames Housing dataset. Compared Linear, Polynomial, Lasso, and Ridge regression models, achieving an <strong>R² score of 0.875</strong> after hyperparameter tuning.
             </p>
             <p>
-              Designed a premium SaaS-style Streamlit dashboard featuring interactive market insights, 
-              real-time valuation engine, gauge visualizations, and modern UI/UX styling.
+              Designed a premium SaaS-style Streamlit dashboard featuring interactive market insights, real-time valuation engine, gauge visualizations, and modern UI/UX styling.
             </p>
-            <p><strong>Skills learned:</strong> data preprocessing, feature engineering, L1 & L2 regularization, 
-            hyperparameter tuning, model evaluation, ML deployment, UI integration.</p>
+            <p><strong>Skills learned:</strong> data preprocessing, feature engineering, L1 &amp; L2 regularization, hyperparameter tuning, model evaluation, ML deployment, UI integration.</p>
+            <a class="proj-link" href="https://github.com/donallsiby/ames-ai-house-price-prediction" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Car Price Predictor -->
+          <article class="project" data-category="ai-ml">
+            <h3>🚗 Car Price Predictor – ML Valuation Engine</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Regression Models</span>
+              <span class="tech-tag">Jupyter</span>
+            </div>
             <p>
-              <a class="proj-link" href="https://github.com/donallsiby/ames-ai-house-price-prediction" target="_blank" rel="noopener">
-                View on GitHub
-              </a>
+              Built a predictive analytics application to estimate pre-owned car market valuations. Developed data preprocessing pipelines including missing value imputation, one-hot encoding, and feature scaling, optimizing Random Forest and Gradient Boosting regressors.
             </p>
+            <p><strong>Skills learned:</strong> Data Preprocessing, Feature Scaling, Regression Modeling, Model Optimization, Scikit-Learn.</p>
+            <a class="proj-link" href="https://github.com/donallsiby/car-price-predictor" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </article>
           
-          <article class="project">
+          <!-- Wedding Planner Website -->
+          <article class="project" data-category="web">
             <h3>Wedding Planner Website</h3>
-            <p class="muted">Web Development · HTML/CSS · JavaScript</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Web Development</span>
+              <span class="tech-tag">HTML5 &amp; CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
             <p>
-              Built a responsive and visually rich website for a wedding planning business featuring service listings,
-              galleries, booking forms and interactive UI elements.
+              Built a responsive and visually rich website for a wedding planning business featuring service listings, galleries, booking forms and interactive UI elements.
             </p>
             <p><strong>Skills learned:</strong> responsive layout, form validation, user interface design, JavaScript event handling.</p>
-            <p><a class="proj-link" href="https://github.com/donallsiby/Wedding-planner-website" target="_blank" rel="noopener">View on GitHub</a></p>
+            <a class="proj-link" href="https://github.com/donallsiby/Wedding-planner-website" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </article>
 
-           <article class="project">
+          <!-- AI Voice Creation by Prompt -->
+          <article class="project" data-category="ai-ml">
             <h3>AI Voice Creation by Prompt</h3>
-            <p class="muted">Generative AI · Python · Transformers · AudioGen · GANSynth</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Generative AI</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Transformers</span>
+              <span class="tech-tag">AudioGen</span>
+              <span class="tech-tag">GANSynth</span>
+            </div>
             <p>
               Built a web application using AudioGen and GANSynth to generate realistic audio from text prompts. Integrated transformer models to create diverse soundscapes with an intuitive UI.
             </p>
             <p><strong>Skills learned:</strong> transformer pipelines, prompt engineering, model integration, API endpoints, Streamlit/Flask demo.</p>
-            <p><a class="proj-link" href="https://github.com/donallsiby/prompttoaudio" target="_blank" rel="noopener">View on GitHub</a></p>
+            <a class="proj-link" href="https://github.com/donallsiby/prompttoaudio" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </article>
 
-
-          
-          <article class="project">
+          <!-- Telecom Customer Churn Analysis -->
+          <article class="project" data-category="analytics">
             <h3>Telecom Customer Churn Analysis</h3>
-            <p class="muted">Data Analytics · Python · Pandas · Seaborn · Machine Learning</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Data Analytics</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Seaborn</span>
+              <span class="tech-tag">Machine Learning</span>
+            </div>
             <p>
-              Conducted an in-depth analysis of telecom customer data to identify key factors contributing to customer churn.
-              Applied Exploratory Data Analysis (EDA) and visualization techniques to uncover behavioral patterns related to
-              contract types, tenure, billing, and payment methods. Generated actionable insights to support customer retention
-              strategies and business decision-making.
+              Conducted an in-depth analysis of telecom customer data to identify key factors contributing to customer churn. Applied Exploratory Data Analysis (EDA) and visualization techniques to uncover behavioral patterns related to contract types, tenure, billing, and payment methods. Generated actionable insights to support customer retention strategies and business decision-making.
             </p>
             <p><strong>Skills learned:</strong> data cleaning, exploratory data analysis, statistical visualization, feature analysis, business insight generation, and predictive analytics foundations.</p>
-            <p><a class="proj-link" href="https://github.com/donallsiby/telecom-customer-churn-analysis" target="_blank" rel="noopener">View on GitHub</a></p>
+            <a class="proj-link" href="https://github.com/donallsiby/telecom-customer-churn-analysis" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </article>
 
-
-          <article class="project">
-            <h3>Power BI Dashboard – Pizza Restaurant Sales & Order Analysis</h3>
-            <p class="muted">Power BI · Sales Analytics · SQL</p>
+          <!-- Pizza Sales Analysis -->
+          <article class="project" data-category="analytics">
+            <h3>Power BI Dashboard – Pizza Restaurant Sales &amp; Order Analysis</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Sales Analytics</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">DAX</span>
+            </div>
             <p>
-              Designed an interactive Power BI dashboard for a pizza restaurant showing order trends, sales channels,
-              menu performance and regional insights.
+              Designed an interactive Power BI dashboard for a pizza restaurant showing order trends, sales channels, menu performance and regional insights.
             </p>
             <p><strong>Skills learned:</strong> data modelling in Power BI, DAX measures, interactive visuals, business insights.</p>
-            <p><a class="proj-link" href="https://github.com/donallsiby/Power-BI-dashboard-providing-sales-and-order-analysis-for-a-pizza-restaurant" target="_blank" rel="noopener">View on GitHub</a></p>
+            <a class="proj-link" href="https://github.com/donallsiby/Power-BI-dashboard-providing-sales-and-order-analysis-for-a-pizza-restaurant" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </article>
 
-          <article class="project">
-            <h3>Power BI Dashboard – Amazon Sales & Profit Performance</h3>
-            <p class="muted">Power BI · Ecommerce Analytics · DAX</p>
+          <!-- Amazon Sales Performance -->
+          <article class="project" data-category="analytics">
+            <h3>Power BI Dashboard – Amazon Sales &amp; Profit Performance</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Ecommerce Analytics</span>
+              <span class="tech-tag">DAX</span>
+              <span class="tech-tag">KPI Dashboards</span>
+            </div>
             <p>
               Created a comprehensive dashboard analysing Amazon sales, profit margins, product categories and geographic performance.
             </p>
             <p><strong>Skills learned:</strong> advanced DAX, data visualisation best practices, KPI tracking and storytelling through dashboards.</p>
-            <p><a class="proj-link" href="https://github.com/donallsiby/Power-BI-dashboard-for-analyzing-Amazon-s-sales-and-profit-performance" target="_blank" rel="noopener">View on GitHub</a></p>
+            <a class="proj-link" href="https://github.com/donallsiby/Power-BI-dashboard-for-analyzing-Amazon-s-sales-and-profit-performance" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </article>
 
-         
+          <!-- Adidas Sales Performance (NEW) -->
+          <article class="project" data-category="analytics">
+            <h3>👟 Power BI – Adidas Sales Performance Analysis</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Sales Analytics</span>
+              <span class="tech-tag">DAX</span>
+              <span class="tech-tag">COVID Impact Analysis</span>
+              <span class="tech-tag">KPI Tracking</span>
+            </div>
+            <p>
+              Designed a business intelligence dashboard analyzing Adidas sales performance, profit margins, and distribution channels. Created time-series visualizations and custom DAX metrics investigating the pandemic's impact on regional revenue streams.
+            </p>
+            <p><strong>Skills learned:</strong> Dax queries, dashboard design, COVID impact forecasting, data modeling, KPI tracking.</p>
+            <a class="proj-link" href="https://github.com/donallsiby/Power-BI-dashboard-analyzing-Adidas-sales" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
 
-          <article class="project">
+          <!-- College Voting System -->
+          <article class="project" data-category="web">
             <h3>College Voting System</h3>
-            <p class="muted">Full-stack Web · PHP · MySQL · Authentication</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Full-stack Web</span>
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Authentication</span>
+            </div>
             <p>
               Developed a secure PHP-based election platform supporting voter registration, real-time voting, and result updates. Improved election transparency and accessibility for 200+ students.
             </p>
-            <p><strong>Skills learned:</strong> relational database design, SQL queries & optimization, backend security, sessions & authentication.</p>
+            <p><strong>Skills learned:</strong> relational database design, SQL queries &amp; optimization, backend security, sessions &amp; authentication.</p>
+            <span class="proj-link"><i class="fas fa-lock"></i> Academic Project</span>
           </article>
 
-          <article class="project">
+          <!-- ML Coursework Collection -->
+          <article class="project" data-category="ai-ml">
             <h3>Machine Learning Coursework Collection</h3>
-            <p class="muted">scikit-learn · Data Preprocessing · Model Evaluation</p>
+            <div class="tech-tags">
+              <span class="tech-tag">scikit-learn</span>
+              <span class="tech-tag">Data Preprocessing</span>
+              <span class="tech-tag">Model Evaluation</span>
+              <span class="tech-tag">Matplotlib</span>
+            </div>
             <p>
-              Implemented typical ML workflows — regression, classification, clustering — and evaluated models with cross-validation,
-              precision/recall/F1 metrics. Visualized results and optimized features via PCA and feature selection.
+              Implemented typical ML workflows — regression, classification, clustering — and evaluated models with cross-validation, precision/recall/F1 metrics. Visualized results and optimized features via PCA and feature selection.
             </p>
             <p><strong>Skills learned:</strong> preprocessing, CV, hyperparameter tuning, visualization with Matplotlib/Seaborn.</p>
+            <span class="proj-link"><i class="fas fa-lock"></i> Lab Collection</span>
           </article>
 
-          <article class="project">
+          <!-- Portfolio Website -->
+          <article class="project" data-category="web">
             <h3>Portfolio Website</h3>
-            <p class="muted">HTML · CSS · JavaScript · GitHub Pages</p>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">GitHub Pages</span>
+            </div>
             <p>
               This personal site: responsive layout, smooth navigation, and project showcase. Deployed on GitHub Pages for easy sharing.
             </p>
             <p><strong>Skills learned:</strong> responsive design, accessibility basics, deployment, SEO meta tags.</p>
+            <a class="proj-link" href="https://github.com/donallsiby/my-portfolio" target="_blank" rel="noopener">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <!-- Experience Section -->
+    <section id="experience" class="section-dark">
       <div class="container">
-        <h2>Experience & Involvement</h2>
+        <h2>Experience &amp; Involvement</h2>
 
         <div class="exp-grid">
           <div class="exp-card">
-            <h4>Freelancer – Data Science & AI</h4>
+            <h4>Freelancer – Data Science &amp; AI</h4>
             <p class="muted">2025 — Present</p>
             <ul>
               <li>Designed and deployed AI/ML solutions for client use cases, improving efficiency and decision-making.</li>
@@ -309,7 +522,7 @@ View on GitHub
           </div>
 
           <div class="exp-card">
-            <h4>Technician & Designer – Global Events</h4>
+            <h4>Technician &amp; Designer – Global Events</h4>
             <p class="muted">2022 — Present</p>
             <ul>
               <li>Created branding materials and digital assets for large-scale events, ensuring high visual impact.</li>
@@ -330,30 +543,54 @@ View on GitHub
             <p class="muted">2024 — 2025</p>
             <ul>
               <li>Designed and delivered interactive visual content for events and promotions across the region.</li>
-              <li>Collaborated with teams to deliver high-quality graphics for 5+ regional initiatives.</li>
+              <li>Collaborated with regional teams to deliver high-quality graphics for 5+ initiatives.</li>
             </ul>
           </div>
         </div>
 
-        <h3 style="margin-top:1.25rem">Key Competencies</h3>
+        <h3 style="margin-top:2.5rem; font-size:1.4rem;">Key Competencies</h3>
         <ul class="learned-list">
-          <li>Data Analysis & Visualization</li>
-          <li>SQL Querying & Database Management</li>
+          <li>Data Analysis &amp; Visualization</li>
+          <li>SQL Querying &amp; Database Management</li>
           <li>Machine Learning Model Development</li>
-          <li>Problem-Solving & Debugging</li>
-          <li>Project Leadership & Team Collaboration</li>
-          <li>Creative Design & Presentation</li>
+          <li>Problem-Solving &amp; Debugging</li>
+          <li>Project Leadership &amp; Team Collaboration</li>
+          <li>Creative Design &amp; Presentation</li>
         </ul>
       </div>
     </section>
 
-    <section id="contact" class="section-dark">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ndonalsiby@gmail.com">ndonalsiby@gmail.com</a></p>
-        <p><i class="fas fa-phone"></i> Phone: +91 98952 18857</p>
-        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/donallsiby" target="_blank" rel="noopener">github.com/donallsiby</a></p>
-        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/donal-siby" target="_blank" rel="noopener">linkedin.com/in/donal-siby</a></p>
+        <p style="color: var(--muted); margin-bottom: 2rem;">Get in touch for potential collaborations, job opportunities, or inquiries.</p>
+        
+        <div class="contact-grid">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <p><strong>Email</strong></p>
+            <p><a href="mailto:ndonalsiby@gmail.com">ndonalsiby@gmail.com</a></p>
+          </div>
+          
+          <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <p><strong>Phone</strong></p>
+            <p><a href="tel:+919895218857">+91 98952 18857</a></p>
+          </div>
+          
+          <div class="contact-card">
+            <i class="fab fa-github"></i>
+            <p><strong>GitHub</strong></p>
+            <p><a href="https://github.com/donallsiby" target="_blank" rel="noopener">github.com/donallsiby</a></p>
+          </div>
+          
+          <div class="contact-card">
+            <i class="fab fa-linkedin"></i>
+            <p><strong>LinkedIn</strong></p>
+            <p><a href="https://www.linkedin.com/in/donal-siby" target="_blank" rel="noopener">linkedin.com/in/donal-siby</a></p>
+          </div>
+        </div>
 
         <div class="signature">
           <p>— Donal Siby</p>
@@ -364,7 +601,7 @@ View on GitHub
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Donal Siby — Built with HTML, CSS & JavaScript</p>
+      <p>© 2026 Donal Siby — Designed &amp; Built with HTML5, CSS3 &amp; JavaScript</p>
     </div>
   </footer>
 
